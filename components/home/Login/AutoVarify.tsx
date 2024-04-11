@@ -42,7 +42,7 @@ const useAutoLogin = () => {
 				});
 		}
 		// 如果没有token，什么也不做，用户将留在登录页面
-	}, []);
+	}, [dispatch]);
 };
 
 export default useAutoLogin;

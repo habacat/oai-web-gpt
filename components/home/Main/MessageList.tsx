@@ -40,7 +40,7 @@ export default function MessageList() {
                 value: []
             })
         }
-    }, [selectedChat])
+    }, [selectedChat, dispatch, getData])
 
     const [copySuccess, setCopySuccess] = useState<Record<string, boolean>>({});
 

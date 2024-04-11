@@ -56,7 +56,7 @@ export default function ChatList() {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [getData])
 
     useEffect(() => {
         const callback: EventListener = () => {
@@ -65,7 +65,7 @@ export default function ChatList() {
         }
         subscribe("fetchChatList", callback)
         return () => unsubscribe("fetchChatList", callback)
-    }, [])
+    }, [getData, subscribe, unsubscribe])
 
     useEffect(() => {
         let observer: IntersectionObserver | null = null
@@ -83,7 +83,7 @@ export default function ChatList() {
                 observer.unobserve(div)
             }
         }
-    }, [])
+    }, [getData])
 
     return (
         <div className='flex-1 mb-[48px] mt-2 flex flex-col overflow-y-auto'>

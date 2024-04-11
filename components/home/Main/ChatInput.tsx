@@ -25,7 +25,7 @@ export default function ChatInput() {
         }
         subscribe("createNewChat", callback)
         return () => unsubscribe("createNewChat", callback)
-    }, [])
+    }, [send, unsubscribe, subscribe])
 
     useEffect(() => {
         if (chatIdRef.current === selectedChat?.id) {
