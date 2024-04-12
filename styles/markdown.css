@@ -611,4 +611,8 @@
         --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
         --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
+
+    .markdown .katex-display {
+        margin: .5rem 0;
+    }
 }

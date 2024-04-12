@@ -5,6 +5,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { PiClipboard } from 'react-icons/pi';
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+
 
 function Markdown({ children, className = "", ...props }: Options) {
     const [copySuccess, setCopySuccess] = useState<boolean>(false);
@@ -74,7 +77,8 @@ function Markdown({ children, className = "", ...props }: Options) {
                     );
                 }
             }}
-            remarkPlugins={[remarkGfm]}
+            remarkPlugins={[remarkGfm, remarkMath]}
+            rehypePlugins={[rehypeKatex]}
             className={`markdown prose dark:prose-invert ${className}`}
             {...props}
         >

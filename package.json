@@ -6,10 +6,9 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "npx prisma generate && next build",
+        "build": "next build",
         "start": "next start",
-        "lint": "next lint",
-        "postinstall": "npx prisma generate"
+        "lint": "next lint"
     },
     "dependencies": {
         "@azure/openai": "^1.0.0-beta.6",
@@ -25,6 +24,7 @@
         "eslint-config-next": "13.4.12",
         "js-cookie": "^3.0.5",
         "jsonwebtoken": "^9.0.2",
+        "katex": "^0.16.10",
         "next": "^13.5.6",
         "openai": "^4.33.0",
         "postcss": "^8.4.38",
@@ -35,7 +35,10 @@
         "react-markdown": "^9.0.1",
         "react-syntax-highlighter": "^15.5.0",
         "react-textarea-autosize": "^8.5.3",
+        "rehype-katex": "^7.0.0",
+        "rehype-react": "^8.0.0",
         "remark-gfm": "^4.0.0",
+        "remark-math": "^6.0.0",
         "tailwindcss": "3.3.3",
         "typescript": "5.1.6",
         "uuid": "^9.0.0"
