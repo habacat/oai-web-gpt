@@ -1,9 +1,9 @@
 "use client"
-// import { Metadata } from "next"
+import { Metadata } from "next"
 
-// export const metadata: Metadata = {
-//     title: "Chat"
-// }
+export const metadata: Metadata = {
+    title: "Chat"
+}
 
 export default function Chat() {
     return (
