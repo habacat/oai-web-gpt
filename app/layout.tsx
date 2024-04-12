@@ -2,6 +2,7 @@ import AppContextProvider from "@/components/AppContext"
 import EventBusContextProvider from "@/components/EventBusContext"
 import "@/styles/globals.css"
 import "@/styles/markdown.css"
+import 'katex/dist/katex.min.css';
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
